@@ -6,44 +6,44 @@
 
 @layer base {
   :root {
-    --background: 218 100% 12%;
+    --background: 220 40% 8%;
     --foreground: 0 0% 100%;
 
-    --card: 220 30% 20%;
+    --card: 140 35% 15%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 220 30% 20%;
+    --popover: 140 35% 15%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 0 68% 52%;
+    --primary: 350 85% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 44 100% 77%;
-    --secondary-foreground: 218 100% 12%;
+    --secondary: 44 95% 65%;
+    --secondary-foreground: 140 35% 15%;
 
-    --muted: 220 20% 30%;
-    --muted-foreground: 0 0% 80%;
+    --muted: 140 25% 25%;
+    --muted-foreground: 0 0% 85%;
 
-    --accent: 44 100% 77%;
-    --accent-foreground: 218 100% 12%;
+    --accent: 44 95% 65%;
+    --accent-foreground: 140 35% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 30% 25%;
-    --input: 220 30% 25%;
-    --ring: 44 100% 77%;
+    --border: 140 30% 30%;
+    --input: 140 30% 25%;
+    --ring: 44 95% 65%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    --sidebar-background: 220 30% 18%;
+    --sidebar-background: 140 35% 12%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 0 68% 52%;
+    --sidebar-primary: 350 85% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 30% 25%;
+    --sidebar-accent: 140 30% 25%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 220 30% 25%;
-    --sidebar-ring: 44 100% 77%;
+    --sidebar-border: 140 30% 25%;
+    --sidebar-ring: 44 95% 65%;
   }
 }
 
@@ -114,4 +114,63 @@
 
 .glow-effect {
   animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes tinsel-wave {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(2deg);
+  }
+  75% {
+    transform: translateY(5px) rotate(-2deg);
+  }
+}
+
+@keyframes santa-wave {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+
+@keyframes ornament-swing {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+.tinsel-wave {
+  animation: tinsel-wave 3s ease-in-out infinite;
+}
+
+.santa-float {
+  animation: santa-wave 4s ease-in-out infinite;
+}
+
+.ornament-swing {
+  animation: ornament-swing 2s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+.bg-festive {
+  background-image: url("https://cdn.poehali.dev/projects/2bedf74f-9482-422a-8ee4-42ee2303c898/files/d07d0848-1c4c-4dfd-bdb9-a83b79a40a1b.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.tree-border {
+  border-image: linear-gradient(135deg, #2d5f3f, #4a8c5e, #2d5f3f) 1;
+  border-width: 3px;
+  border-style: solid;
 }
